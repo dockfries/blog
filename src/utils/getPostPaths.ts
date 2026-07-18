@@ -17,7 +17,8 @@ function getPostPathSegments(filePath: string | undefined): string[] {
 
 function getIdSlug(id: string): string {
   const postId = id.split("/");
-  return postId.length > 0 ? String(postId[postId.length - 1]) : id;
+  const filename = postId.length > 0 ? String(postId[postId.length - 1]) : id;
+  return filename.replace(/\.[^/.]+$/, "");
 }
 
 function getPostSlugPath(id: string, filePath: string | undefined): string {
@@ -34,7 +35,7 @@ function getPostSlugPath(id: string, filePath: string | undefined): string {
  * e.g. `/examples/my-post`
  */
 export function getPostSlug(id: string, filePath: string | undefined): string {
-  return `/${getPostSlugPath(id, filePath)}`;
+  return getPostSlugPath(id, filePath);
 }
 
 /**
