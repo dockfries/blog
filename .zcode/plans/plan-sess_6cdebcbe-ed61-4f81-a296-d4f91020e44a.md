@@ -1,0 +1,1 @@
+修改 `src/utils/postFilter.ts`，用 dayjs.tz 把 `pubDatetime` 按 `config.site.timezone`（Asia/Shanghai）重新解析，让 `pubDatetime: 2026-07-19` 在 +8 时区 7月19日 00:00 就生效，而不是等 UTC 午夜。
