@@ -19,11 +19,11 @@ export default defineAstroPaperConfig({
   },
   features: {
     lightAndDarkMode: true,
-    dynamicOgImage: false,
-    showArchives: false,
+    dynamicOgImage: true,
+    showArchives: true,
     showBackButton: true,
     editPost: { enabled: false },
-    search: false,
+    search: 'pagefind',
   },
   socials: [
     { name: "github", url: "https://github.com/dockfries" },
